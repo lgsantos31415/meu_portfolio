@@ -1,0 +1,171 @@
+:root {
+  --white: #fefefe;
+  --light-blue: #acbace;
+  --gray-300: #9d9d9d;
+  --gray-600: #626262;
+  --gray-900: #060606;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans";
+  font-size: 6.25%;
+}
+body {
+  background: var(--white);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 32rem 64rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  align-items: center;
+}
+header > span {
+  font-size: 14rem;
+  color: var(--gray-600);
+}
+header > span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+#circle {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--white) 0deg 90deg,
+    var(--gray-900) 90deg 180deg,
+    var(--gray-600) 180deg 270deg,
+    var(--gray-300) 270deg
+  );
+}
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+#portfolio {
+  justify-content: center;
+  align-items: center;
+}
+#portfolio > h1 {
+  word-break: break-all;
+  font-size: 290rem;
+  line-height: 290rem;
+  font-weight: 400;
+  color: var(--gray-900);
+}
+section {
+  display: flex;
+}
+.left,
+.right {
+  width: 50%;
+}
+
+#sobre .left,
+#conhecimento .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#sobre .left {
+  align-items: end;
+}
+#conhecimento .right {
+  align-items: start;
+}
+#sobre .left > h1,
+#conhecimento .right > h1 {
+  word-break: break-all;
+  font-size: 180rem;
+  line-height: 180rem;
+  font-weight: 400;
+  color: var(--gray-900);
+}
+#conhecimento .right > h1 {
+  line-height: 205rem;
+}
+#sobre .right {
+  padding-inline: 124rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32rem;
+}
+#sobre .right > p,
+#sobre .right > p > strong {
+  line-height: 28rem;
+  font-size: 16rem;
+}
+#sobre .right > p {
+  font-weight: 200;
+  color: var(--gray-600);
+}
+#sobre .right > p > strong {
+  font-weight: 800;
+  color: var(--gray-900);
+}
+#sobre .right > a > #img {
+  width: 100%;
+  height: 310rem;
+  background-image: url("./src/img.webp");
+  background-size: cover;
+  background-position: top;
+  transition: all 1s ease-in-out;
+}
+#sobre .right > a > #img:hover {
+  filter: saturate(0) brightness(1.1);
+}
+#conhecimento .left {
+  display: grid;
+  grid-template-areas: "a b c" ". d e" ". . f";
+  place-items: center;
+}
+#conhecimento .left .column:nth-child(1) {
+  grid-area: a;
+}
+#conhecimento .left .column:nth-child(2) {
+  grid-area: b;
+}
+#conhecimento .left .column:nth-child(3) {
+  grid-area: c;
+}
+#conhecimento .left .column:nth-child(4) {
+  grid-area: d;
+}
+#conhecimento .left .column:nth-child(5) {
+  grid-area: e;
+}
+#conhecimento .left .column:nth-child(6) {
+  grid-area: f;
+}
+#conhecimento .left .column {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: fit-content;
+  gap: 6rem;
+}
+#conhecimento .left .column > i {
+  font-size: 56rem;
+  color: var(--gray-600);
+}
+#conhecimento .left .column > span {
+  font-size: 20rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
