@@ -38,6 +38,7 @@ header {
 header > span {
   font-size: 14rem;
   color: var(--gray-600);
+  user-select: none;
 }
 header > span:hover {
   cursor: pointer;
@@ -51,11 +52,13 @@ header > span:nth-child(1) {
   height: 40rem;
   border-radius: 50%;
   background: conic-gradient(
-    var(--white) 0deg 90deg,
-    var(--gray-900) 90deg 180deg,
-    var(--gray-600) 180deg 270deg,
-    var(--gray-300) 270deg
+    var(--gray-900) 0deg 72deg,
+    var(--gray-600) 72deg 144deg,
+    var(--gray-300) 144deg 216deg,
+    var(--light-blue) 216deg 288deg,
+    var(--white) 288deg
   );
+  cursor: pointer;
 }
 section {
   width: 100%;
@@ -69,9 +72,11 @@ h1 {
     0deg,
     var(--gray-900),
     var(--gray-900),
+    var(--gray-900),
     var(--gray-600),
     var(--gray-300),
-    var(--light-blue)
+    var(--light-blue),
+    var(--white)
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -238,7 +243,6 @@ section {
   }
   #sobre {
     justify-content: center;
-    gap: 50rem;
   }
   #sobre > .left > h1,
   #conhecimento > .right > h1 {
@@ -248,18 +252,42 @@ section {
   #sobre > .left h1:nth-child(1) {
     margin-right: auto;
   }
-
   #sobre > .right {
-    padding-inline: 24rem;
-    gap: 15rem;
+    gap: 26rem;
+  }
+  #sobre > .right,
+  #sobre > .left {
+    padding-inline: 12rem;
   }
   #sobre > .right > a > #img {
-    height: 190rem;
+    height: 200rem;
+  }
+  #sobre > .right > .row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  #sobre > .right > .row > a {
+    text-decoration: none;
+  }
+  #sobre > .right > .row > a > i {
+    background: linear-gradient(
+      45deg,
+      var(--gray-900),
+      var(--gray-600),
+      var(--gray-300),
+      var(--light-blue)
+    );
+    border: 1rem solid var(--light-blue);
+    border-radius: 16rem;
+    padding: 8rem;
+    font-size: 38rem;
+    color: var(--white);
   }
   #sobre > .right > p,
   #sobre > .right > p > strong {
-    font-size: 16rem;
-    line-height: 22rem;
+    font-size: 18rem;
+    line-height: 26rem;
   }
   #conhecimento {
     justify-content: center;
