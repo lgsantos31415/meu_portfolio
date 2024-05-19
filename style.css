@@ -65,8 +65,8 @@ section {
 }
 #portfolio > h1 {
   word-break: break-all;
-  font-size: 290rem;
-  line-height: 290rem;
+  font-size: 280rem;
+  line-height: 280rem;
   font-weight: 400;
   color: var(--gray-900);
 }
@@ -134,30 +134,37 @@ section {
   filter: saturate(1) brightness(1);
 }
 #conhecimento > .left {
+  padding-block: 64rem;
   display: grid;
-  grid-template-areas: "a b c" ". d e" ". . f";
   place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 #conhecimento > .left > a {
   text-decoration: none;
 }
 #conhecimento > .left > a:nth-child(1) {
-  grid-area: a;
+  grid-row: 1;
+  grid-column: 1/2;
 }
 #conhecimento > .left > a:nth-child(2) {
-  grid-area: b;
+  grid-row: 1;
+  grid-column: 2/3;
 }
 #conhecimento > .left > a:nth-child(3) {
-  grid-area: c;
+  grid-row: 1;
+  grid-column: 3/4;
 }
 #conhecimento > .left > a:nth-child(4) {
-  grid-area: d;
+  grid-row: 2;
+  grid-column: 2/3;
 }
 #conhecimento > .left > a:nth-child(5) {
-  grid-area: e;
+  grid-row: 2;
+  grid-column: 3/4;
 }
-#conhecimento .left > a:nth-child(6) {
-  grid-area: f;
+#conhecimento > .left > a:nth-child(6) {
+  grid-row: 3;
+  grid-column: 3/4;
 }
 #conhecimento > .left .column {
   cursor: pointer;
@@ -249,10 +256,34 @@ section {
   #conhecimento {
     justify-content: center;
   }
-  #conhecimento > .left {
-    grid-template-areas: ". . a . ." ". b . c ." ". d e f .";
-  }
   #conhecimento > .right {
     align-items: center;
+  }
+  #conhecimento > .left {
+    padding: 0;
+  }
+  #conhecimento > .left > a:nth-child(1) {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+  #conhecimento > .left > a:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+  #conhecimento > .left > a:nth-child(3) {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+  }
+  #conhecimento > .left > a:nth-child(4) {
+    grid-row: 3;
+    grid-column: 1/2;
+  }
+  #conhecimento > .left > a:nth-child(5) {
+    grid-row: 3;
+    grid-column: 2/3;
+  }
+  #conhecimento > .left > a:nth-child(6) {
+    grid-row: 3;
+    grid-column: 3/4;
   }
 }
