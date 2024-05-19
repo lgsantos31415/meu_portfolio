@@ -30,6 +30,7 @@ header {
   justify-content: space-between;
   font-weight: 800;
   align-items: start;
+  z-index: 1;
 }
 header > span {
   font-size: 14rem;
@@ -238,7 +239,7 @@ section {
     gap: 10rem;
   }
   #sobre > .right > a > #img {
-    height: 160rem;
+    height: 175rem;
   }
   #sobre > .right > p,
   #sobre > .right > p > strong {
